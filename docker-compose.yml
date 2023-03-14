@@ -1,0 +1,22 @@
+version: "3.5"
+
+services:
+  pernikahan-restfull-api:
+    container_name: "pernikahann-restfull-api"
+    image: rest-api-pernikahan
+    ports:
+      - 8080:8080
+    environment:
+      DATABASE_USER: pernikahan
+      DATABASE_PASS: pernikahan
+      DATABASE_URL: jdbc:postgresql://pernikahan-restfull-api-postgres:5432/pernikahan-db
+  pernikahan-restfull-api-postgres:
+    container_name: "pernikahan-restfull-api-postgres"
+    image: postgres:12-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: pernikahan
+      POSTGRES_PASSWORD: pernikahan
+      POSTGRES_DB: pernikahan-db
+

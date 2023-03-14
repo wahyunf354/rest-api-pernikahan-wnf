@@ -1,0 +1,81 @@
+POST http://localhost:8080/api/v1/kehadiran
+X-Api-Key:SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "A0001",
+  "name": "Wahyu Nur Fadillah",
+  "kehadiran": true,
+  "jumlah_kehadiran" : 1,
+  "id_pernikahan": "P0001"
+}
+
+###
+POST http://localhost:8080/api/v1/kehadiran
+X-Api-Key:SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "",
+  "name": "",
+  "kehadiran": null,
+  "jumlah_kehadiran" : -1,
+  "id_pernikahan": ""
+}
+
+### Post Ucapan Doa
+POST http://localhost:8080/api/v1/ucapandoa
+X-Api-Key:SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "A0005",
+  "name": "Wahyu Nur Fadillah",
+  "ucapan": "Selamat yaa",
+  "id_pernikahan": "P0002"
+}
+
+###
+POST http://localhost:8080/api/v1/ucapandoa
+X-Api-Key:SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "",
+  "name": "",
+  "ucapan": "",
+  "id_pernikahan": ""
+}
+
+### Get List Ucapan Pernikahan
+GET http://localhost:8080/api/v1/ucapandoa/pernikahan/P0002
+X-Api-Key:SECRET
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/ucapandoa/pernikahan/P0001?size=3
+X-Api-Key:SECRET
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/ucapandoa/pernikahan/P0001?size=2&page=1
+X-Api-Key:SECRET
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/ucapandoa/pernikahan/P0003
+X-Api-Key:SECRET
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/ucapandoa/pernikahan/P0001?size=3
+X-Api-Key:SECRE
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/ucapandoa/pernikahan/P0001?size=3
+Accept: application/json
